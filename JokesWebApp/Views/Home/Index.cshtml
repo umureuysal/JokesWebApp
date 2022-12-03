@@ -1,0 +1,36 @@
+﻿
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+ 
+
+<h2>Index</h2>
+<br />
+<table class="table table-condensed">
+    <tr>
+        <th>Soru</th>
+        <th>Cevap</th>
+    </tr>
+    @foreach (var category in Model)
+    {
+<tr>
+    <td>
+        @category.SakaSoru
+    </td>
+    <td>
+        @category.SakaCevap
+    </td>
+    <td>
+</tr>
+    }
+</table>
+<br />
+<a href="/AdminCategory/KategoriEkle" class="btn btn-primary">Kategori Ekle</a>
+
+</div>
